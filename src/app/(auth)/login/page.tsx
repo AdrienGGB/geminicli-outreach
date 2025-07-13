@@ -3,11 +3,7 @@ import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { SubmitButton } from './submit-button';
 
-export default function Login({
-  searchParams,
-}: {
-  searchParams: { message: string };
-}) {
+export default function Login({ searchParams }: { searchParams: { message: string | string[] | undefined } }) {
   const signIn = async (formData: FormData) => {
     'use server';
 
